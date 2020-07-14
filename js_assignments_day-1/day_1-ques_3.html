@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            3rd question
+        </title>
+        
+    </head>
+    <body>
+        <p>The expected outputs are: </p>
+        <p id="a"></p>
+        <p id="b"></p>
+        <p id="c"></p>
+        <p id="d"></p>
+
+        <script>
+            var d=new Date();
+            var date=d.getDate();
+            var month=d.getMonth();
+            var year=d.getFullYear();
+            document.getElementById('a').innerHTML=month+"-"+date+"-"+year;
+            document.getElementById('b').innerHTML=month+"/"+date+"/"+year;
+            document.getElementById('c').innerHTML=date+"-"+month+"-"+year;
+            document.getElementById('d').innerHTML=date+"/"+month+"/"+year;
+        </script>
+
+    </body>
+</html>

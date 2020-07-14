@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            1st question
+        </title>
+    </head>
+    <body>
+        <p id="time"></p>
+        <p id="time1"></p>
+        <script>
+            var d=new Date();
+            var days=["sunday","monday","Tuesday","wednesday","Thursday","Friday","saturday"];
+            var day=days[d.getDay()];
+            var hours=d.getHours();
+            var min=d.getMinutes();
+            var seconds=d.getSeconds();
+            var format;
+            if(hours<12){
+                format="AM";
+            }else{
+                format="PM";
+            }
+            hours=hours%12;
+            document.getElementById("time").innerHTML="Today is : "+day;
+            document.getElementById("time1").innerHTML="Current time is : "+hours+" "+format+" : "+min+" : "+seconds;
+            
+        </script>
+    </body>
