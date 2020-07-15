@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Day3(Day1)- Assignment- 3Q:Data types in javaScript</title>
+</head>
+<body>
+      <paragraph>
+      	
+      	JavaScript is a loosely typed, or dynamically typed, language. This means that a variable that’s declared with one type can be converted to another type without explicitly converting the data to another type. Variables can also contain any type at any time, depending on what is assigned. For example, if we write the following code:
+
+         <br> eg:
+                var size = 16;                                 //value or number
+                var Name = "Rohith";                           // String
+                var x = {firstName:"Neha", lastName:"Rohith"}; // Object
+                
+                <br>above size variable gives number
+                name gives string
+                x defines object
+
+        <br> letus take other example :
+                    let x;    //undefined
+                   x="hello";  //string
+                   x=true;     //boolean
+                   <br>above at let x is undefined,
+                   at x is equal to double quoted hello defines string,
+                   at x is equal to true defines boolean type.                
+      
+
+
+      <br>JavaScript has multiple data types. There are seven primitive data types and an object type. The seven primitive types are Boolean, null, undefined, number, BigInt, string, and symbol.
+      All of JavaScripts primitive types are immutable, which means that they cant be changed. The primitive types contain values that are fixed once they are defined. The Boolean type is either true or false and represents logical entities. The null type only has one value, which is null . The null value means that it refers to some nonexistent or invalid object or address. The undefined type is unique to JavaScript. It means that a variable hasnot been assigned any value.
+
+    <h1>Numbers</h1>
+        There are two number types in JavaScript, which are <mark>number</mark> and <mark>BigInt</mark>.
+        The largest and smallest available values for a number are Infinity and -Infinity respectively. We can also use the constants <mark>Number.MAX_VALUE or Number.MIN_VALUE</mark> to represent the largest and smallest numbers. We can use the <mark> Number.isSafeInteger()</mark> function to check whether a number is in the range of numbers available that are allowed in JavaScript. There are also the constants <mark>Number.MAX_SAFE_INTEGER and Number.MIN_SAFE_NUMBER </mark>to check if the number you specify in the safe range.
+
+       <br>  eg: 1/+0 // Infinity
+             1/-0 // -Infinity
+
+
+    <h1>Boolean</h1>
+        Numbers can represent Boolean values with bitwise operators to operate them as Boolean, but this is bad practice since JavaScript already has Boolean types, so using numbers to represent Boolean will be unclear to people reading the code. That’s because numbers can represent numbers, or they can represent Booleans if someone chooses to use them that way.
+        <br>eg: 
+            correct = false;
+            wrong = true;
+
+
+      <h1>BigInt</h1>
+          In JavaScript, there is the BigInt type to store numbers that are beyond safe integer range. A BigInt number can be created by adding an n character to the end of a number. With BigInt, we can make calculations that have results beyond the safe range of normal numbers. For example, we can write the following expressions and still get the numbers we expect:
+         <br> eg:
+            const x = 2n ** 55n;
+            const y = x + 1n;
+
+
+              For x we get 36028797018963968n and for y we get 36028797018963969n , which is what we expect. BigInts can use the same arithmetic operations as numbers like +, *, -, ** and %. A BigInt behaves like a number when converted to a Boolean with functions, keywords, or operators like Boolean, if , || , &&, !. BigInts cannot be operated in the same expressions as numbers. If we try that, we will get a TypeError.
+      
+
+      <h1>Strings</h1>
+           Strings are used to define names ,characters and definition.Nothing more to explain about this:
+            <br> eg:  x = "red"
+                  y = "hello"
+
+      <h1>Symbols</h1>
+          It is a unique and immutable identifier:
+          It is like a built-in object, but it doesn’t have a constructor, so we can’t write new Symbol to construct a symbol object with the new keyword.
+       <br>To create new symbols, we can write:
+        const HelloSymbol = Symbol('Hello')
+    
+    <h1>Objects</h1>
+
+          Object is a reference data type, which means it can be referenced by an identifier that points to the location of the object in memory. In memory, the object’s value is stored, and, with the identifier, we can access the value. Object has properties, which are key-value pairs with the values being able to contain the data with primitive types or other objects. That means we can use object to build complex data structures. The key is an identifier for the values of a property, which can be stored as a string or symbol. There are two types of properties that have certain attributes in an object. Objects have data properties and accessor properties.
+           <br> eg:   var x = {firstName:"Neha", lastName:"Rohith"}; // Object
+                  <!-- data property   -->
+                  [[Value]]-----> data property//undefined
+                  [[Writable]] ----->boolean value(true/false)
+                  <!-- accessor property -->
+                  [[Get]]---->default:undefined
+                  [[Set]]---->object property or to make changes
+
+
+      </paragraph> 
+</body>
+</html> 

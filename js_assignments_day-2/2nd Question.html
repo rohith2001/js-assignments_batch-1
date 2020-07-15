@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Day3(Day1)- Assignment- 2Q:VAR,LET AND CONST</title>
+</head>
+<body>
+  <paragraph>
+
+     Difference between VAR,LET AND CONST with Code examples:
+       <h1>Var</h1>
+        
+       The JavaScript variables statement is used to declare a variable and, optionally, we can initialize the value of that variable.
+
+      <br>Example: var a =10;
+
+      <br>-->Variable declarations are processed before the execution of the code.
+    <br>-->>The scope of a JavaScript variable declared with var is its current execution context.
+      <br>-->>The scope of a JavaScript variable declared outside the function is global.
+
+      Code eg:
+             <br>1. var a =10;
+                    console.log(a); //output 10
+              <br>2. var a =10;
+                     var a =16;
+                     console.log(a); //o/p:16
+
+              It is similar to the Global variable present in other languages.
+
+       <h1>Let</h1>
+         The let statement declares a local variable in a block scope. It is similar to var, in that we can optionally initialize the variable.
+
+        <br> Example: let x =10;
+         The let statement allows you to create a variable with the scope limited to the block on which it is used.
+         It is similar to the variable we declare in other languages like Java, .NET, etc.
+
+        Code eg:
+              <br>1.   { 
+                 	let x=10;
+               console.log(x); 
+               }       // output 10
+
+             <br> 2. {
+                let x=10;
+                let x=16;
+                console.log(x);
+               }    //throws error
+
+           but for var it gives output as 16.
+
+        <h1>Const</h1>
+           
+           const statement values can be assigned once and they cannot be reassigned. The scope of const statement works similar to let statements.
+
+             <br>Example: const y =10;
+              Code eg:
+                   <br>1. const MY_ROHITH =16;
+                    console.log(MY_ROHITH);  //output 16 
+                   <br>2. const MY_CODE =1;
+                         console.log(MY_CODE);  //output 1
+                         MY_CODE =2;           //throws type error
+                         console.log(MY_CODE); 
+
+               The code will throw an error when we try to reassign the existing const variable.
+
+
+  </paragraph>
+
+</body>
+</html>
