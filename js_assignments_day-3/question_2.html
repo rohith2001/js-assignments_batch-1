@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            2nd question
+        </title>
+    </head>
+    <body>
+            <script>
+                // Declaring an array in different way
+                var phones=new Array("vivo","realme","poco","oppo","samsung");
+                console.log(phones[0]);
+
+                //functions in an array
+                var arr =[];
+                arr[0]=Date.now();
+                arr[1]=phones;
+                console.log(arr[0]);
+                console.log(arr[1]);
+
+                //New element can also be added to an array using the length property
+                arr[arr.length]="added";
+
+                // typeof Returns the type of that array
+                console.log(typeof arr);
+
+                // Check whether it is an array
+                console.log(Array.isArray(arr));
+
+                var str="please turn on the light";
+
+                // finding the position of a specified text in string
+                var pos=str.indexOf("turn");
+                console.log(pos);
+
+                // searches a string
+                console.log(str.search("the"));
+
+                // extracts a part of a string
+                console.log(str.slice(4,8));
+
+                // substr() method also same as slice,but it takes length of extracted part as second parameter
+                console.log(str.substr(6,9));
+
+                // replace() method replaces only the first match
+                console.log(str.replace("on","off"));
+
+                // trim() method to remove the whitespaces in a string
+                var t="   Hello  ";
+                console.log(t.trim());
+            </script>
+    </body>
+</html>
