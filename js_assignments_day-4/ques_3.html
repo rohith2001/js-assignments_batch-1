@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            ques 3
+        </title>
+        
+    </head>
+    <body>
+        <script>
+            var marks=Number(prompt("Enter your marks"));
+            var grade;
+            if(marks<30){
+                grade="grade is F";
+            }else if(marks<50){
+                grade="grade is D";
+            }else if(marks<60){
+                grade="grade is C";
+            }else if(marks<80){
+                grade="grade is B";
+            }else if(marks>80){
+                grade='grade is A';
+            }
+            console.log('marks are '+marks+ " and "+grade);
+
+        </script>
+        <script>
+            var n;
+            switch(Number(marks%10)){
+                case 3:
+                case 4:
+                    n="grade is D";
+                    break;
+                case 5:
+                case 6:
+                    n="grade is C";
+                    break;
+                case 7:
+                case 8:
+                    n="grade is B";
+                    break;
+                case 9:
+                case 10:
+                    n="grade is A";
+                    break;
+                default:
+                    n="grade is F";
+                    break;
+            }
+            console.log('marks are '+marks+ " and "+n);
+        </script>
+    </body>
+</html>
