@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <p>Enter Your salary:</p>
+        <label  style="margin: 0px;height: 100px;width: 400px;"><input type="text" id="mytext" ></label>
+        <button id="enter" onclick="func()">Enter</button>
+        <script>
+            function func(){
+                var x=Number(document.getElementById("mytext").value);
+                var a;
+                if(x==0){
+                    alert("please enter a valid number");
+                }
+                if(x>0 &&x<5001){
+                    a=(0.02*x);
+                    console.log(x+a);
+                }else if(x>5000 && x<10001){
+                    a=(0.05*x);
+                    console.log(x+a);
+                }else if(x>10000 && x<20001){
+                    a=(0.07*x);
+                    console.log(x+a);
+                }else if(x>20000){
+                    a=(0.1*x);
+                    console.log(x+a);
+                }
+            }
+        </script>
+
+    </body>
+</html>
