@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Assignment_Batch_1_Question2</title>
+</head>
+<body>
+  
+    <script type="text/javascript">
+    	
+
+    	class User {
+    constructor(name, age,email) {
+      this.name = name;
+      this.age = age;
+      this.email = email;
+      this.Coins = 0;
+      this.courses = [];
+    }
+
+    static greet(){
+        console.log("Hello User");
+    }
+
+    login(){
+        console.log(`${this.name} has logged in`);
+        return this;
+    }
+    logout(){
+        console.log(`${this.name} has logged out`);
+        return this;
+    }
+    addCoins(){
+        this.Coins++;
+        console.log(`${this.name} has ${this.Coins} coins`);
+        return this;
+    }
+    deleteCoins(){
+          this.Coins--;
+          console.log(`${this.name} has been removed coins from their account and  present coins  are ${this.Coins} ` );
+          return this;
+       }
+    getDetails(){
+        console.log(`Name is ${this.name}, email is ${this.email}`);
+        return this;
+    }
+
+}
+class Moderator extends User{
+    constructor(name,age,email,role){
+        super(name,age,email);
+        this.role = role;
+        this.Coins = 0;
+    }
+    
+
+    deleteUser(user){
+        users = users.filter(u =>{
+        	console.log(`${this.name} has removed the user`)
+            return u.email != user.email; 
+        })
+    }
+
+}
+
+class Admin extends Moderator{
+   addCourse(user,course){
+       user.courses.push(course);
+       console.log(user);
+   }
+   deleteCourse(user,course){
+   	user.courses.pop(course);
+   	console.log(user);
+   }
+
+
+}
+
+
+let user1 = new User('Neha',18,'neha@gmail.com')
+let user2 = new User('Rohith',19,'Rohith@gmai.com')
+let user3 = new User('Ankith',17,'ankith@gmail.com')
+
+let mod = new Moderator('raj',24,'raj@gmail.com','Moderator');
+let admin = new Admin('chiluka',25,'chiluka@gmail.com');
+let users = [user1,user2,mod,admin];
+
+users.forEach(element => {
+    console.log(element);
+});
+
+User.greet();
+//adding courses 
+admin.addCourse(user1,'Javascript');
+admin.addCourse(user1,'Python');
+admin.addCourse(user2,'Blockchain');
+admin.addCourse(user3,'Database');
+//login 
+ user1.login()
+ //adding coins
+ user1.addCoins();
+ user1.addCoins();
+ user1.addCoins();
+ //deleting coins
+ user1.deleteCoins();
+ user2.login();
+ user2.addCoins();
+ user2.deleteCoins();
+ //details of users
+ user1.getDetails();
+ user2.getDetails();
+ user3.getDetails();
+
+
+ user1.login().addCoins().addCoins().getDetails().logout();
+ user2.login().addCoins().addCoins().getDetails().logout();
+user3.logout();
+  
+
+  user1.login();
+  //deleting the particular course for user
+  admin.deleteCourse(user2,'Blockchain');
+  admin.deleteCourse(user3,'Database');
+  user1.logout();
+  mod.deleteUser(user3);
+  console.log(users);
+  mod.deleteUser(user2);
+  console.log(users);
+  
+
+    </script>
+
+
+
+</body>
+</html>

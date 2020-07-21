@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Assignment_Batch_1_Question1</title>
+</head>
+<body>
+     
+
+     <script type="text/javascript">
+     	
+     
+
+     console.log("Question 1:")
+
+      console.log("1. Takes a positive number from the user. ")
+
+
+      	 function isPositive(value=prompt("enter your number",0)){
+           if (Math.sign(value) > 0) {
+   // Positive
+         console.log(`${value} is Positive `,true);
+
+         console.log("2. Makes an array of numbers till the number given by user ");
+      
+      let arr = [];
+     console.log(`${value} is arrlength`);
+    
+
+        
+        
+        
+      // const input =  console.log(`${value} `) ;
+      //   let number = [];
+      //   number.length = input;
+      //   console.log(number);
+          
+        
+      } else {
+  
+           console.log(prompt(`${value} not a  correct entry  `),false);
+             }
+   }
+        isPositive();
+
+
+    
+
+
+
+
+
+
+   console.log( " 3. Use higher order function to filter the odd numbers") 
+    var nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+     var oddNumbers = nums.filter(num => num % 2 !== 0 );
+     console.log(oddNumbers)
+
+
+     console.log(" 4.Generate and array of the cubes of the filtered numbers")
+     console.log(Array.from(oddNumbers, x => x * x * x)); 
+
+
+
+    
+
+
+
+
+     </script>
+
+
+
+</body>
+</html>
