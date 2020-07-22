@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title >JavaScript Assignment_Batch_1_Question2</title>
+
+   <script type="text/javascript">
+   	
+   function printTable(){
+				var num;
+				num=Number(document.getElementById('txtNumber').value);
+				for(var i=1; i<=20; i++){
+					var p= document.getElementById('Print');
+					
+
+					p.innerHTML +=  num + "*" + i + " = " + (num * i) + "<br/>"
+				}
+			}
+
+   </script>
+
+
+</head>
+<body>
+   
+  
+        
+
+
+       
+	
+
+
+   <h1 color="blue">Js program to Display Table of given input Number.</h1>
+		<p><input type="text" id="txtNumber" placeholder="Enter your number"/></p>
+		<p><input type="button"  color= "blue "value="Print Table." onclick='printTable()'/>
+		<!--print table-->
+		<p id="Print"></p>
+
+   </script>
+
+
+
+
+</body>
+</html>

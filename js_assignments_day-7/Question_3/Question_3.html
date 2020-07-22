@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Assignment_Batch_1_Question3</title>
+
+	 <link rel="stylesheet" type="text/css" href="style.css">
+
+    </head>
+<body>
+<h1>welcome to Letsupgrade Assignment Webpage!</h1>
+    <p id ="welcome"></p>
+   
+     <!-- <p><input type="button"  color= "blue " align="center" size="50%" value="Enter Name "onclick='Printmessage()'/> -->
+		
+
+
+		<button id="dark" align="center" size="50%">Switch to Dark Mode</button>
+
+
+
+    <h1 id="title"></h1>
+
+
+
+    <h4 id="time" size="50%"></h4>
+
+
+
+    
+
+    <ul id="list">
+
+
+
+    </ul>
+
+    
+
+    <h2 id="attribute">Hello letsupgrader</h2>
+
+
+
+     
+
+
+    
+
+    <button id="btn">Leave Page</button>
+    
+
+
+
+
+
+	<script type="text/javascript">
+    
+   //function Printmessage() {
+     	// body...
+    
+//     var customerName = prompt("Please enter your name", "<name goes here>");
+
+//     if (customerName!= 0) {
+
+//     document.getElementById("welcome").innerHTML =
+
+//     "Hello " + customerName + "! How are you today?";
+
+// }
+  
+//}
+const title = document.getElementById('title');
+
+
+
+console.log(title);
+
+console.log(title.innerHTML);
+
+console.log(title.innerText);
+
+
+
+const para = document.getElementsByClassName('imp');
+
+
+
+console.log(para);
+
+
+
+const data = document.getElementsByTagName('p');
+
+
+
+console.log(data);
+
+
+
+
+
+const dataarr = Array.from(data);
+
+
+
+dataarr.forEach(el=>{
+
+    console.log(el);
+
+})
+
+const data1 = document.querySelectorAll('p');
+
+console.log(data1);
+
+const attr = document.getElementById('attribute');
+
+console.log(attr.getAttribute('id'));
+
+attr.classList.add('blue');
+
+attr.classList.add('bgYellow');
+
+
+dataarr.forEach(para=>{
+
+    if(para.innerText.includes('amet')){
+
+        para.classList.add('highlight');
+
+    }
+
+})
+
+
+function showConfirm(){
+
+    confirm("Are you sure? you want to exit from this page ");
+
+}
+
+
+
+const button = document.getElementById('btn');
+
+
+
+button.onclick = function(){
+
+    confirm("Are you sure? you want to exit from this page");
+
+}
+
+
+
+
+
+
+
+
+
+
+
+const dmode = document.getElementById('dark');
+
+
+
+dmode.onclick = function changeColor(){
+
+    
+
+    document.body.style.backgroundColor = 'black';
+
+    document.body.style.color = 'white';
+
+    document.body.style.fontFamily = 'Helvetica';
+
+   
+
+}
+
+
+
+
+
+const ctime = document.getElementById('time');
+
+
+
+
+
+function clock(){
+
+    let date = new Date();
+
+    let time = date.toLocaleTimeString();
+
+    ctime.innerText = time;
+
+}
+
+
+
+// clock();
+
+
+
+setInterval(clock,1000);
+
+
+
+
+
+
+</script>
+
+     
+
+
+ 
+
+
+    
+
+
+
+</body>
+</html>

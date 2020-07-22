@@ -1,0 +1,5 @@
+
+body {
+    background: violet; /* Initial background */
+    transition: background .5s; /* .5s how long transitions shoould take */
+}
